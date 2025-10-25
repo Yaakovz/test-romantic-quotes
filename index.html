@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For My Love 💕</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>For My Love ~ Nina 💖</h1>
+
+  <div class="quote-box">
+    <p id="quote">"You are my today and all of my tomorrows."</p>
+    <p class="author">— Leo Christopher</p>
+    <button onclick="newQuote()">Next Quote</button>
+  </div>
+
+  <script>
+    const quotes = [
+      ["You are the reason I smile every day.", "— Unknown"],
+      ["I love you not only for what you are, but for what I am when I am with you.", "— Roy Croft"],
+      ["If I had a flower for every time I thought of you, I could walk through my garden forever.", "— Alfred Lord Tennyson"],
+      ["You're my favorite place to go when my mind searches for peace.", "— Unknown"],
+      ["Every love story is beautiful, but ours is my favorite.", "— Unknown"],
+      ["You are my dream come true. My heart beats your name with every pulse, and every moment with you is a treasure I cherish.", "— Unknown"]
+    ];
+
+    function newQuote() {
+      const random = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quote").textContent = quotes[random][0];
+      document.querySelector(".author").textContent = quotes[random][1];
+    }
+  </script>
+</body>
+</html>
